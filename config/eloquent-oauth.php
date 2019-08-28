@@ -20,8 +20,8 @@ return [
         ],
         'github' => [
             'client_id' => '942727fddf3e60e919c4',
-            'client_secret' => 'fef0a547fa04cead5fcdf2ab7a050c556e3b5478',
-            'redirect_uri' => 'http://advanced-forum-laravel/github/redirect',
+            'client_secret' => 'f3961a1b2de34dd524f613edf8ed57b0a3f04cdf',
+            'redirect_uri' => 'http://advanced-forum-laravel.loc/github/redirect',
             'scope' => [],
         ],
         'linkedin' => [
