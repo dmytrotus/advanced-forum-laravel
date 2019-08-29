@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Channel;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,6 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(UserstableSeeder::class);
+        //$this->call(UserstableSeeder::class);
+        $this->call(ChannelsTableSeeder::class);
     }
 }
