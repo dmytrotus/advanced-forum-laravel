@@ -1,55 +1,40 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-12">
+  
             <div class="card">
-                <div class="card-header">Channels</div>
 
-                <div class="d-flex justify-content-end m-3">
-                <a href="{{ route('channels.create')}}" class="btn btn-success">New Channel</a>
-                </div>
+                <div class="text-center card-header">Create New Discussion</div>
+
 
                 <div class="card-body">
                    
-                   <table class="table table-hover">
-                       <thread>
-                           <th>Name</th>
-                           <th>Edit</th>
-                           <th>Delete</th>
-                       </thread>
-                       <tbody>
-                           @foreach($channels as $channel)
+                  <form action="{{ route('discussions.store') }}" method="POST">
+                    {{ csrf_field() }}
 
-                           <tr>
-                               <td>
-                                   {{$channel->title}}
-                               </td>
-                               <td>
-                                   <a href="{{ route('channels.edit', ['channel' => $channel->id ]) }}" class="btn btn-sm btn-info">Edit</a>
-                               </td>
-                               <td>
-                                <form action="{{ route('channels.destroy', ['channel' => $channel->id]) }}" method="POST">
+                    <div class="form-group">
+                      <label for="tile">Title</label>
+                      <input name="title" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label for="channel">Pick a channel</label>
+                      <select name="channel_id" id="channel_id" class="form-control">
+                        @foreach ($channels as $channel)
+                        <option value="{{ $channel->id }}">{{ $channel->title }}</option>
+                        @endforeach
+                      </select>
+                    </div>
 
-                                  {{ csrf_field() }}
-                                  {{ method_field('DELETE') }}
+                    <div class="form-group">
+                      <label for="content">Ask a question</label>
+                      <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                    </div>
 
-                                  <button type="submit" class="btn btn-sm btn-danger">Delete</button>
-                                  
-
-
-                                </form>
-                                   
-                               </td>
-                           </tr>
-
-                           @endforeach
-                       </tbody>
-                   </table>
+                    <div class="form-group">
+                      <button class="btn btn-success pull-right" type="submit">Create discussion</button>
+                    </div>
+                  </form>
                 </div>
             </div>
-        </div>
-    </div>
-</div>
+
 @endsection
