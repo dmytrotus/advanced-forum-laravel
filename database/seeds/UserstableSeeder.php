@@ -19,5 +19,13 @@ class UserstableSeeder extends Seeder
             'nickname' => 'dmytrotus',
             'avatar' => asset('avatars/avatar.png')
         ]);
+
+        App\User::create([
+            'name' => 'Вася Пупкін',
+            'password' => bcrypt('password'),
+            'email' => 'vasia_pupkin@mail.ru',
+            'nickname' => 'user1',
+            'avatar' => asset('avatars/avatar.png')
+        ]);
     }
 }
