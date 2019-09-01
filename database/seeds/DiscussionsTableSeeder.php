@@ -31,7 +31,7 @@ class DiscussionsTableSeeder extends Seeder
         	'content' => 'Nisl cras mi accumsan ac praesent tempor nec egestas magnis hac elit nisi tempus vestibulum non ultricies in blandit neque taciti euismod condimentum consectetur venenatis morbi condimentum morbi dictum.',
         	'channel_id' => rand(1,8),
         	'user_id' => 2,
-        	'slug' => str_slug($t1)
+        	'slug' => str_slug($t2)
         ];
 
         $d3 = [
@@ -39,7 +39,7 @@ class DiscussionsTableSeeder extends Seeder
         	'content' => 'Nisl cras mi accumsan ac praesent tempor nec egestas magnis hac elit nisi tempus vestibulum non ultricies in blandit neque taciti euismod condimentum consectetur venenatis morbi condimentum morbi dictum.',
         	'channel_id' => rand(1,8),
         	'user_id' => 2,
-        	'slug' => str_slug($t1)
+        	'slug' => str_slug($t3)
         ];
 
         $d4 = [
@@ -47,7 +47,7 @@ class DiscussionsTableSeeder extends Seeder
         	'content' => 'Nisl cras mi accumsan ac praesent tempor nec egestas magnis hac elit nisi tempus vestibulum non ultricies in blandit neque taciti euismod condimentum consectetur venenatis morbi condimentum morbi dictum.',
         	'channel_id' => rand(1,8),
         	'user_id' => 1,
-        	'slug' => str_slug($t1)
+        	'slug' => str_slug($t4)
         ];
 
 

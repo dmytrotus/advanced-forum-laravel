@@ -106,7 +106,7 @@
             </div>
 
             <div class="col-md-8">
-                <div class="container">
+                <div class="container card-body">
                 @yield('content')
                 </div>
             </div>
